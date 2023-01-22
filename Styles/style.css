@@ -12,15 +12,16 @@
     list-style: none;
     color: #212121;
     border: none;
+
+    scroll-behavior: smooth;
+    scroll-margin: 60px;
 }
 
 /* Body */
 body {
     display: flex;
     flex-direction: column;
-    margin: 20px 60px;
-
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -30,9 +31,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 0;
+    padding: 10px 60px;
     position: sticky;
     top: 0;
+    width: 100%;
+    z-index: 999;
     
     background-color: rgba(255, 255, 255, 0.9);
 }
@@ -51,7 +54,12 @@ span {
 
     text-align: center;
     font-weight: 500;
-    margin: 0 0 0 1.8em;
+    margin: 0 0 0 4vw;
+}
+
+/* Warna font menu navigasi atas jika halaman aktif */
+.aktif {
+    color: #d4462e !important;
 }
 
 #terangGelap-NavMob {
@@ -59,8 +67,48 @@ span {
     gap: 15px;
 }
 
+/* Navigasi Mobile */
 #navigasi-mobile {
     display: none;
+}
+
+#navigasi-mobile i {
+    cursor: pointer;
+    font-size: 1.9em;
+}
+
+#silang {
+    display: none;
+}
+
+#bungkus-menuNM {
+    display: none;
+    position: fixed;
+    top: 74px;
+    right: 0;
+    z-index: 999;
+    
+    text-align: center;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#bungkus-menuNM a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+
+    margin: 20px 0 5px 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#bungkus-menuNM i:hover {
+    transform: scale(unset);
 }
 
 /* Icon terang */
@@ -70,16 +118,25 @@ span {
 
 /* Icon gelap */
 .fa-moon {
+    width: 40.4px;
+    height: 40.4px;
     color: #F5F3CE;
+}
+
+#terangGelap-NavMob {
+    display: flex;
+    align-items: center;
 }
 
 #terang-gelap i {
     cursor: pointer;
-    font-size: 2em;
+    padding: 5px;
+    font-size: 1.9em;
+    border-radius: 50%;
 }
 
-/* Rotasi icon terang dan gelap saat hover */
-#terang-gelap i:hover {
+/* Rotasi icon terang, gelap, dan silang saat hover */
+#terang-gelap i:hover, #silang:hover {
     transform: rotate(360deg);
 }
 
@@ -97,8 +154,13 @@ a:hover, i:hover {
 }
 
 /* Transisi saat dihover atau mouse leave */
-#judul h1, a, button, i {
+#judul h1, a, button, i, .menu, #figureImgUtama img {
     transition: 0.3s;
+}
+
+/* Main */
+main, footer {
+    margin: 0 60px;
 }
 
 #utama {
@@ -107,7 +169,7 @@ a:hover, i:hover {
     justify-content: space-between;
     align-items: center;
 
-    height: 90vh;
+    height: 92vh;
 }
 
 #ucapan-deskripsi h2 {
@@ -123,22 +185,198 @@ a:hover, i:hover {
     max-height: 500px;
 }
 
+#figureImgUtama img {
+    animation: putarGeprek 60s infinite;
+}
+
+@keyframes putarGeprek {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 #utama img {
     max-width: 100%;
+    filter: brightness(90%);
 }
 
 /* Cursor pointer semua tombol */
 button {
     cursor: pointer;
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin-top: 1em;
     padding: 10px 30px;
     border-radius: 10px;
-    background-color: #fccfce;
+    color: whitesmoke;
+    background-color: #d42109;
 }
 
 /* Ukuran besar saat dihover */
-#judul h1:hover ,a:hover, #judul a:hover, #navigasi-atas a:hover,
-button:hover, #terang-gelap i:hover, footer i:hover {
+#judul h1:hover ,a:hover, #judul a:hover, #navigasi-atas a:hover, #navigasi-mobile i:hover,
+button:hover, #terang-gelap i:hover, .menu:hover, footer i:hover {
     scale: 1.1;
+}
+
+/* Article */
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 90vh;
+}
+
+article h3 {
+    font-size: 8vw;
+}
+
+/* Bungkus menu */
+.bungkus-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 1.5em;
+}
+
+.menu {
+    text-align: center;
+
+    max-width: 290px;
+    height: 380px;
+    background-color: rgba(220, 220, 220, 0.1);
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.menu h3 {
+    font-size: 1.3em;
+}
+
+.menu:hover {
+    background-color: rgba(220, 220, 220, 0.6);
+    box-shadow: 0 0 3px rgba(33, 33, 33, 0.5);
+    opacity: inherit;
+}
+
+.menu img {
+    width: 280px;
+    height: 280px;
+}
+
+#menu1:hover, #menu2:hover, #menu3:hover, #menu4:hover, #menu5:hover, #menu6:hover, #menu7:hover, #menu8:hover {
+    filter: blur(0) !important;
+    border: unset;
+}
+
+.menu figure {
+    width: 100%;
+    height: inherit;
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+
+.menu figure *:hover  {
+    scale: unset;
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    margin-top: 20em;
+    padding: 10px 10px 0 10px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 15px 15px 0 0;
+}
+
+#bungkus-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+
+    margin: 1em 0 2em 0;
+    text-align: center;
+}
+
+#bungkus-navBawah a {
+    display: block;
+    text-align: left;
+}
+
+#copyright {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#h3Footer::after {
+    content: "";
+    display: block;
+    margin: 4px 0 1em 0;
+    border: 1px solid #928585;
+}
+
+.fX, .fY, .fZ {
+    font-size: 1.8em;
+}
+
+.fX:hover, .fY:hover, .fZ:hover {
+    scale: unset;
+    opacity: unset;
+}
+
+#bungkus-medSos a, #bungkus-bhsPmrgm i {
+    margin: 0 8px;
+}
+
+/* Warna hover media sosial */
+.fa-facebook:hover {
+    color: #3b5998 !important;
+}
+.fa-linkedin:hover {
+    color: #0a66c2 !important;
+}
+
+.fa-github:hover {
+    color: #161b22;
+}
+
+.fa-envelope:hover {
+    color: #d4462e !important;
+}
+
+
+#bungkus-medSos a:hover, #bungkus-medSos i:hover {
+    opacity: unset !important;
+}
+
+/* Warna saat hover bahasa pemrograman */
+.fa-heart:hover {
+    color: #d42109 !important;
+}
+
+.fa-html5:hover {
+    color: #dd4b25 !important;
+}
+
+.fa-css3-alt:hover {
+    color: #254bdd !important;
+}
+
+.fa-js:hover {
+    color: #f2c200 !important;
+}
+
+.fa-heart:hover, .fa-html5:hover, .fa-css3-alt:hover, .fa-js:hover {
+    opacity: unset !important;
 }

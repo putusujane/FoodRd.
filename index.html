@@ -39,7 +39,7 @@
 
             <!-- Navigasi Utama -->
             <nav id="navigasi-atas">
-                <a href="#beranda"><i class="iconNavAtas fa-solid fa-house"></i>Beranda</a>
+                <a href="#beranda" class="aktif"><i class="aktif iconNavAtas fa-solid fa-house"></i>Beranda</a>
                 <a href="#menu"><i class="iconNavAtas fa-sharp fa-solid fa-bowl-food"></i>Menu</a>
                 <a href="#tentang"><i class="iconNavAtas fa-solid fa-circle-info"></i>Tentang</a>
                 <a href="#kontak"><i class="iconNavAtas fa-solid fa-phone-volume"></i>Kontak</a>
@@ -56,11 +56,24 @@
 
                 <!-- Navigasi Mobile -->
                 <section id="navigasi-mobile">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-circle-xmark"></i>
+                    <i id="bar" class="fa-solid fa-bars" onclick="silang('silang', 'block')"></i>
+                    <i id="silang" class="fa-solid fa-circle-xmark" onclick="bar('bar', 'block')"></i>
                 </section>
             </section>
         </header>
+        <!-- =============================================== -->
+
+
+        <!-- Bungkus menu navigasi -->
+        <section id="bungkus-menuNM">
+            <a href="#beranda" class="aktif"><i class="aktif iconNavAtas fa-solid fa-house"></i>Beranda</a> <hr>
+            <a href="#menu"><i class="iconNavAtas fa-sharp fa-solid fa-bowl-food"></i>Menu</a>
+            <a href="#tentang"><i class="iconNavAtas fa-solid fa-circle-info"></i>Tentang</a>
+            <a href="#kontak"><i class="iconNavAtas fa-solid fa-phone-volume"></i>Kontak</a>
+            <a href="#dukung"><i class="iconNavAtas fa-solid fa-share-from-square"></i>Dukung</a>
+        </section>
+        <!-- =============================================== -->
+
 
         <!-- Badan -->
         <main>
@@ -76,79 +89,95 @@
 
                 <!-- Gambar masakan -->
                 <figure id="figureImgUtama">
-                    <img src="Images/ayam-geprek.png" alt="Gambar masakan">
+                    <img src="Images/ayam-geprek.png" alt="Ayam Geprek">
                 </figure>
             </section>
 
             <!-- Artikel -->
             <article>
 
-                <h3>-- Menu --</h3>
+                <h3 id="menu">- <span>Menu</span> Masakan -</h3>
 
                 <!-- Bungkus menu -->
                 <section class="bungkus-menu">
 
                     <!-- Menu 1 -->
-                    <section class="menu menu1">
+                    <section id="menu1" class="menu menu1">
                         <figure>
-                            <img src="#" alt="Menu1">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu1">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 2 -->
-                    <section class="menu menu2">
+                    <section id="menu2" class="menu menu2">
                         <figure>
-                            <img src="#" alt="Menu2">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu2">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 3 -->
-                    <section class="menu menu3">
+                    <section id="menu3" class="menu menu3">
                         <figure>
-                            <img src="#" alt="Menu3">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu3">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 4 -->
-                    <section class="menu menu4">
+                    <section id="menu4" class="menu menu4">
                         <figure>
-                            <img src="#" alt="Menu4">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu4">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 5 -->
-                    <section class="menu menu6">
+                    <section id="menu5" class="menu menu6">
                         <figure>
-                            <img src="#" alt="Menu5">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu5">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 6 -->
-                    <section class="menu menu6">
+                    <section id="menu6" class="menu menu6">
                         <figure>
-                            <img src="#" alt="Menu6">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu6">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 7 -->
-                    <section class="menu menu7">
+                    <section id="menu7" class="menu menu7">
                         <figure>
-                            <img src="#" alt="Menu7">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu7">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
                     <!-- Menu 8 -->
-                    <section class="menu menu8">
+                    <section id="menu8" class="menu menu8">
                         <figure>
-                            <img src="#" alt="Menu8">
-                            <figcaption>Deskripsi</figcaption>
+                            <a href="#">
+                                <img src="Images/ayam-geprek.png" alt="Menu8">
+                                <h3>Lorem Ipsum Dolor Sit Amet</h3>
+                            </a>
                         </figure>
                     </section>
 
@@ -159,37 +188,49 @@
         </main>
 
         <!-- Kaki -->
-        <footer>
+        <footer id="footer">
+            
+            <section id="bungkus-footer">
+                <!-- Navigasi bawah -->
+                <nav id="navigasi-bawah">
+                    <i class="fX fa-solid fa-compass"></i><h3 id="h3Footer">Menu Navigasi</h3>
+                    <section id="bungkus-navBawah">
+                        <a href="#beranda">Beranda</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#tentang">Tentang</a>
+                        <a href="#kontak">Kontak</a>
+                        <a href="#dukung">Dukung</a>
+                    </section>
+                </nav>
 
-            <!-- Navigasi bawah -->
-            <nav id="navigasi-bawah">
-                <a href="#beranda">Beranda</a>
-                <a href="#menu">Menu</a>
-                <a href="#tentang">Tentang</a>
-                <a href="#kontak">Kontak</a>
-                <a href="#dukung">Dukung</a>
-            </nav>
+                <!-- Media Sosial -->
+                <section id="media-sosial">
+                    <i class="fY fa-solid fa-thumbs-up"></i><h3 id="h3Footer">Media Sosial</h3>
+                    <section id="bungkus-medSos">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    </section>
+                </section>
 
-            <!-- Media Sosial -->
-            <section id="media-sosial">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            </section>
-
-            <!-- Bahasa Pemrograman -->
-            <section id="bahasa-pemrograman">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-js"></i>
+                <!-- Bahasa Pemrograman -->
+                <section id="bahasa-pemrograman">
+                    <i class="fZ fa-solid fa-file-code"></i><h3 id="h3Footer">Dibuat Dengan:</h3>
+                    <section id="bungkus-bhsPmrgm">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                    </section>
+                </section>
             </section>
 
             <!-- Copyright -->
             <section id="copyright">
-                <p>Putu Sujane | 2023</p>
+                <p>Putu Sujane | &copy; 2023</p>
             </section>
+
         </footer>
 
         <!-- File Eksternal JavaScript -->
