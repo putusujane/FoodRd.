@@ -24,7 +24,7 @@ const gelap = (id, nilai) => {
     document.body.style.backgroundColor = "unset";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #tentang p, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#212121";
     }
@@ -41,7 +41,7 @@ const terang = (id, nilai) => {
     document.body.style.backgroundColor = "#1e1e1e";
     document.getElementById("header").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #tentang p, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#f5f5f5";
     }
@@ -174,7 +174,7 @@ otherElement.addEventListener('mouseleave', () => {
 });
 
 // =================================================
-// Fitur Mode terang atau gelap sesuai tema/pengaturan browser atau OS.
+// Fitur Mode terang atau gelap sesuai tema/pengaturan browser atau Sistem Operasi.
 const isDark = window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   if (event.matches) {
     terang('gelap', 'block');
@@ -183,3 +183,12 @@ const isDark = window.matchMedia('(prefers-color-scheme: dark)').addEventListene
     gelap('terang', 'block');
   }
 });
+
+// Memberikan properti title tiap elemen <a>
+const setTitle = (id, atribut) => {
+  let x = document.querySelectorAll(id);
+  for (let i = 0; i < x.length; i++) {
+    x[i].setAttribute(atribut, x[i].innerText);
+}}
+
+setTitle("header a, main a, #bungkus-navBawah a", "title")
