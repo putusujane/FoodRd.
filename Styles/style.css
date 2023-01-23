@@ -58,7 +58,7 @@ main {
     overflow: hidden;
 }
 
-main, footer, #bungkus-menuNM {
+main, footer {
     margin: 0 20px;
 }
 
@@ -151,7 +151,7 @@ main, footer, #bungkus-menuNM {
 }
 
 #bungkus-menuNM i:hover {
-    transform: scale(unset);
+    /* transform: scale(0); */
 }
 
 /* Icon terang */
@@ -281,11 +281,12 @@ article {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    min-height: 100vh;
+    height: 100%;
 }
 
-#menu {
+.menuH3 {
     font-size: 4em;
+    margin-bottom: 2em;
 }
 
 /* Bungkus menu */
@@ -294,8 +295,7 @@ article {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 
 .menu {
@@ -344,9 +344,21 @@ article {
     opacity: 1;
 }
 
+#tentang, #kontak, #dukung {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#tentang p, #kontak p, #dukung p {
+    font-size: 1.5em;
+}
+
 /* Footer */
 footer {
-    margin-top: 20em;
+    /* margin-top: 20em; */
     padding: 10px 10px 0 10px;
     background-color: rgb(245, 245, 245);
     border-radius: 15px 15px 0 0;

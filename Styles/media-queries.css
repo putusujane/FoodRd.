@@ -66,12 +66,22 @@
         display: none;
     }
 
-    #menu {
+    .menuH3 {
         font-size: 9vw;
+    }
+
+    #tentang p, #kontak p, #dukung p {
+        font-size: 1.2em;
     }
 }
 
 @media screen and (max-width: 370px) {
+
+    :hover {
+        scale: unset !important;
+        opacity: unset !important;
+    }
+    
     #ucapan-deskripsi h2 {
         font-size: 15vw;
     }
