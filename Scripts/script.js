@@ -191,4 +191,17 @@ const setTitle = (id, atribut) => {
     x[i].setAttribute(atribut, x[i].innerText);
 }}
 
-setTitle("header a, main a, #bungkus-navBawah a", "title")
+setTitle("header a, main a, #bungkus-navBawah a", "title");
+
+
+// Memberikan properti target tiap elemen <a>
+const setTarget = (id) => {
+  let x = document.querySelectorAll(id);
+
+  for (let i = 0; i < x.length; i++) {
+    x[i].setAttribute("target", "_blank");
+  }
+}
+
+setTarget(".menu a, #bungkus-navBawah a, #bungkus-medSos a");
+
