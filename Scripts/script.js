@@ -24,7 +24,7 @@ const gelap = (id, nilai) => {
     document.body.style.backgroundColor = "unset";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#212121";
     }
@@ -41,7 +41,7 @@ const terang = (id, nilai) => {
     document.body.style.backgroundColor = "#1e1e1e";
     document.getElementById("header").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#f5f5f5";
     }

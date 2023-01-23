@@ -50,12 +50,23 @@ header {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+main {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='720' preserveAspectRatio='none' viewBox='0 0 1440 720'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1031%26quot%3b)' fill='none'%3e%3cpath d='M915.88 65.12L967.64 65.12L967.64 116.88L915.88 116.88z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M219.75 466.17L233.3 466.17L233.3 479.72L219.75 479.72z' stroke='rgba(3%2c 123%2c 11%2c 0.1)'%3e%3c/path%3e%3cpath d='M134.56 160.75L191.47 160.75L191.47 217.66L134.56 217.66z' fill='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M139.67 509.77L142.5 509.77L142.5 571.96L139.67 571.96z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M1409.09 660.54a67.98 67.98 0 1 0-98.39 93.84z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M346.58 235.61L417.49 235.61L417.49 306.52L346.58 306.52z' fill='rgba(3%2c 123%2c 11%2c 0.1)'%3e%3c/path%3e%3cpath d='M1136.35 360.06a1.85 1.85 0 1 0 2.8-2.42z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M439.55 579.38a20.54 20.54 0 1 0 24.91-32.66z' fill='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M509.03 663.74L576.1 663.74L576.1 726.52L509.03 726.52z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M642.19 243.84 a44.73 44.73 0 1 0 89.46 0 a44.73 44.73 0 1 0 -89.46 0z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M1302.42 472.7a20.75 20.75 0 1 0-25.6 32.67z' fill='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M541 532.88L574.55 532.88L574.55 566.74L541 566.74z' fill='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M885.91 96.53L935.01 96.53L935.01 113.84L885.91 113.84z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M361.63 155.96 a51.9 51.9 0 1 0 103.8 0 a51.9 51.9 0 1 0 -103.8 0z' fill='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M1028.28 369.2a19.27 19.27 0 1 0 16.39 34.88z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M95.24 528.53L112.83 528.53L112.83 548.25L95.24 548.25z' fill='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M1425.79 623.56a15.47 15.47 0 1 0 17.66-25.41z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3cpath d='M1267.49 634.33 a18.05 18.05 0 1 0 36.1 0 a18.05 18.05 0 1 0 -36.1 0z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M454.11 616.44 a50.11 50.11 0 1 0 100.22 0 a50.11 50.11 0 1 0 -100.22 0z' fill='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M1051.17 217.54L1096.82 217.54L1096.82 263.19L1051.17 263.19z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M641.56 113.05L653.43 113.05L653.43 140.06L641.56 140.06z' stroke='rgba(231%2c 54%2c 53%2c 0.1)'%3e%3c/path%3e%3cpath d='M62.31 22.83L100.94 22.83L100.94 61.46L62.31 61.46z' fill='rgba(3%2c 123%2c 11%2c 0.1)'%3e%3c/path%3e%3cpath d='M57.96 213.06L120.62 213.06L120.62 275.72L57.96 275.72z' fill='rgba(3%2c 123%2c 11%2c 0.1)'%3e%3c/path%3e%3cpath d='M783.23 406.17 a52.81 52.81 0 1 0 105.62 0 a52.81 52.81 0 1 0 -105.62 0z' fill='rgba(3%2c 123%2c 11%2c 0.1)'%3e%3c/path%3e%3cpath d='M49.51 680.98 a17.07 17.07 0 1 0 34.14 0 a17.07 17.07 0 1 0 -34.14 0z' stroke='rgba(211%2c 183%2c 20%2c 0.1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1031'%3e%3crect width='1440' height='720' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 main, footer {
     margin: 0 20px;
 }
 
-span {
+#spanMerah {
     color: #d42109;
+}
+
+#spanH2 {
+    font-weight: 450;
 }
 
 #navigasi-atas {
@@ -103,14 +114,26 @@ span {
 #bungkus-menuNM {
     display: none;
     position: fixed;
-    top: 74px;
+    top: 84px;
     right: 0;
     z-index: 999;
     
     text-align: center;
-    width: 250px;
+    width: 40%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 1px solid rgba(33, 33, 33, 0.3);
+    animation: menuNavMob 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes menuNavMob {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40%;
+    }
 }
 
 #bungkus-menuNM a {
@@ -182,8 +205,13 @@ a:hover, i:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* overflow: hidden; */
 
     height: 100vh;
+}
+
+#mainBlur {
+    display: none;
 }
 #ucapan-deskripsi {
     display: flex;
