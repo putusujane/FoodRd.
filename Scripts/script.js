@@ -184,24 +184,38 @@ const isDark = window.matchMedia('(prefers-color-scheme: dark)').addEventListene
   }
 });
 
-// Memberikan properti title tiap elemen <a>
-const setTitle = (id, atribut) => {
-  let x = document.querySelectorAll(id);
-  for (let i = 0; i < x.length; i++) {
-    x[i].setAttribute(atribut, x[i].innerText);
-}}
 
-setTitle("header a, main a, #bungkus-navBawah a", "title");
-
-
-// Memberikan properti target tiap elemen <a>
-const setTarget = (id) => {
-  let x = document.querySelectorAll(id);
-
-  for (let i = 0; i < x.length; i++) {
-    x[i].setAttribute("target", "_blank");
+class FoodRd {
+  constructor(id) {
+    this.id = document.querySelectorAll(id);
   }
-}
 
-setTarget(".menu a, #bungkus-navBawah a, #bungkus-medSos a");
+  // Method
+  setAtribut(atribut, nilai) {
+    for (let i = 0; i < this.id.length; i++) {
 
+      if ( atribut == "style") {
+      this.id[i].style = nilai;
+
+      } else if (atribut == "title") {
+        this.id[i].setAttribute("title", nilai = this.id[i].innerText);
+
+      } else if (atribut == "target") {
+        this.id[i].setAttribute("target", "_blank");
+
+      } else if (atribut === "link") {
+        this.id[i].setAttribute("href", nilai =  "articles/" + this.id[i].innerText.replace(/\s+/g, '-').toLowerCase() + ".html");
+      }
+    }
+  };
+
+};
+
+const setTitle = new FoodRd("header a, main a, #bungkus-navBawah a");
+setTitle.setAtribut("title");
+
+const setTarget = new FoodRd("article a, #bungkus-medSos a");
+setTarget.setAtribut("target");
+
+const setLink = new FoodRd("article a");
+setLink.setAtribut("link");
