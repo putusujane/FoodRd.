@@ -16,7 +16,7 @@
 
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    list-style: none;
+    /* list-style: none; */
     color: #212121;
     border: none;
 
@@ -286,7 +286,7 @@ article {
 
 .menuH3 {
     font-size: 4em;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 /* Bungkus menu */
@@ -300,9 +300,10 @@ article {
 
 .menu {
     text-align: center;
+    overflow: hidden;
 
-    max-width: 350px;
-    height: 400px;
+    width: 340px;
+    max-height: 300px;
     background-color: rgba(220, 220, 220, 0.1);
     border: 1px solid gainsboro;
     border-radius: 15px;
@@ -320,7 +321,8 @@ article {
 }
 
 .menu img {
-    width: 90%;
+    width: 100%;
+    height: 200px;
 }
 
 #menu1:hover, #menu2:hover, #menu3:hover, #menu4:hover, #menu5:hover, #menu6:hover, #menu7:hover, #menu8:hover {
@@ -355,6 +357,18 @@ article {
 #tentang p, #kontak p, #dukung p {
     font-size: 1.5em;
 }
+
+#tentang section, #kontak section, #dukung section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tentang i, #kontak i, #dukung i {
+    font-size: 2em;
+}
+
+
 
 /* Footer */
 footer {
@@ -444,4 +458,116 @@ footer {
 
 .fa-heart:hover, .fa-html5:hover, .fa-css3-alt:hover, .fa-js:hover {
     opacity: unset !important;
+}
+/* =========================================================== */
+
+
+/* Style untuk bagian detail artikel menu */
+#mainArtikel {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
+
+#artikelUtama {
+    width: 70%;
+}
+
+#bungkusArtikel, .kontenAside {
+    margin: 10px 20px;
+}
+
+#judulArtikel h2 {
+    margin-bottom: 1em;
+}
+
+#gambarArtikel {
+    text-align: center;
+}
+
+#gambarArtikel img {
+    border-radius: 10px;
+}
+
+#resep h3 {
+    margin: 1em 0;
+}
+
+h4 {
+    margin: 0 0 0 20px;
+}
+
+ul, ol {
+    margin: 1.2em 0 1.2em 50px;
+}
+
+li {
+    line-height: 1.8em;
+    padding-inline-start: 10px;
+    vertical-align: middle;
+}
+
+li::after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin-bottom: 4px;
+    border: 1px solid rgb(128, 128, 128, 0.5);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    overflow: hidden;
+
+}
+
+.kontenAside {
+    text-align: center;
+}
+
+.kontenAside h3 {
+    font-size: 1.4em;
+}
+
+.kontenAside h3 {
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.kontenAside h3::after, #judulArtikel h2::after {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    border: 1px solid rgba(220, 220, 220, 1);
+}
+
+.kontenAside a {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+
+    font-weight: bold;
+    width: 100%;
+    max-height: 270px;
+    margin-bottom: 3em;
+}
+
+.kontenAside img {
+    width: 100%;
+    max-height: 240px;
+    border-radius: 15px;
+    background-position: center;
+}
+
+#artikelUtama, aside {
+    background-color: rgba(245, 245, 245, 0.6);
+    border: 1px solid rgba(245, 245, 245, 0.1);
+    border-radius: 15px;
 }

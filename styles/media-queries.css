@@ -34,6 +34,25 @@
         flex-wrap: wrap;
         gap: 15px;
     }
+
+    /* Responsive untuk detail halaman menu */
+    #mainArtikel {
+        flex-direction: column;
+        gap: 15vh;
+    }
+
+    #artikelUtama, aside {
+        width: 100%;
+    }
+
+    .kontenAside a {
+        max-height: 300px;
+    }
+
+    .kontenAside img {
+        width: 86vw;
+        max-height: 260px;
+    }
 }
 
 @media screen and (max-width: 655px) {
@@ -97,5 +116,23 @@
     .menu:hover {
         scale: unset !important;
         filter: blur(0) !important;
+    }
+
+    /* ================================================= */
+
+    #bungkusArtikel {
+        padding: 0;
+    }
+    
+    #judulArtikel h2 {
+        text-align: center;
+    }
+
+    ul, ol {
+        margin-left: 30px;
+    }
+
+    h4 {
+        margin-left: 10px;
     }
 }

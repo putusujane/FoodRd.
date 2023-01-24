@@ -1,3 +1,47 @@
+class FoodRd {
+  constructor(id) {
+    this.id = document.querySelectorAll(id);
+  }
+
+  // Method
+  setAtribut(atribut, nilai) {
+    for (let i = 0; i < this.id.length; i++) {
+
+      if ( atribut == "style") {
+      this.id[i].style = nilai;
+
+      } else if (atribut == "title") {
+        this.id[i].setAttribute("title", nilai = this.id[i].innerText);
+
+      } else if (atribut == "target") {
+        this.id[i].setAttribute("target", "_blank");
+
+      } else if (atribut === "link") {
+
+        if (!document.URL.includes("articles")) {
+        this.id[i].setAttribute("href", nilai = "articles/" + this.id[i].innerText.replace(/\s+/g, '-').toLowerCase() + ".html");
+
+        } else {
+          this.id[i].setAttribute("href", nilai = this.id[i].innerText.replace(/\s+/g, '-').toLowerCase() + ".html");
+        }
+      }
+
+    }
+  };
+
+};
+
+const setTitle = new FoodRd("header a, main a, #bungkus-navBawah a");
+setTitle.setAtribut("title");
+
+const setTarget = new FoodRd("article a, #bungkus-medSos a");
+setTarget.setAtribut("target");
+
+const setLink = new FoodRd("article a, aside a");
+setLink.setAtribut("link");
+
+
+
 // Menu navigasi mobile
 const bar = (id, nilai) => {
   document.getElementById("silang").style.display = "none";
@@ -24,13 +68,18 @@ const gelap = (id, nilai) => {
     document.body.style.backgroundColor = "unset";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#212121";
     }
 
     document.getElementById("footer").style.background = "#f5f5f5";
     document.getElementById("bungkus-menuNM").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+
+
+    document.getElementById("artikelUtama").style.background = "rgba(245, 245, 245, 0.6)";
+
+    document.getElementById("aside").style.background = "rgba(245, 245, 245, 0.6)";
 }
 // ============================================================================
 const terang = (id, nilai) => {
@@ -41,7 +90,7 @@ const terang = (id, nilai) => {
     document.body.style.backgroundColor = "#1e1e1e";
     document.getElementById("header").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, p, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#f5f5f5";
     }
@@ -50,6 +99,11 @@ const terang = (id, nilai) => {
 
     // warna background menu mobile
     document.getElementById("bungkus-menuNM").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
+
+
+    document.getElementById("artikelUtama").style.background = "rgba(48, 48, 48, 0.7)";
+
+    document.getElementById("aside").style.background = "rgba(48, 48, 48, 0.7)";
 }
 
 
@@ -183,39 +237,3 @@ const isDark = window.matchMedia('(prefers-color-scheme: dark)').addEventListene
     gelap('terang', 'block');
   }
 });
-
-
-class FoodRd {
-  constructor(id) {
-    this.id = document.querySelectorAll(id);
-  }
-
-  // Method
-  setAtribut(atribut, nilai) {
-    for (let i = 0; i < this.id.length; i++) {
-
-      if ( atribut == "style") {
-      this.id[i].style = nilai;
-
-      } else if (atribut == "title") {
-        this.id[i].setAttribute("title", nilai = this.id[i].innerText);
-
-      } else if (atribut == "target") {
-        this.id[i].setAttribute("target", "_blank");
-
-      } else if (atribut === "link") {
-        this.id[i].setAttribute("href", nilai =  "articles/" + this.id[i].innerText.replace(/\s+/g, '-').toLowerCase() + ".html");
-      }
-    }
-  };
-
-};
-
-const setTitle = new FoodRd("header a, main a, #bungkus-navBawah a");
-setTitle.setAtribut("title");
-
-const setTarget = new FoodRd("article a, #bungkus-medSos a");
-setTarget.setAtribut("target");
-
-const setLink = new FoodRd("article a");
-setLink.setAtribut("link");

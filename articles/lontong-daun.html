@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Tag Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="description" content="FoodRd. - Lontong Daun">
+        <meta name="keywords" content="FoodRd., Lontong Daun, Food, Masakan, Makanan, Resep masakan">
+        <meta name="author" content="Putu Sujane">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../images/favicon/site.webmanifest">
+
+        <!-- Tag Title -->
+        <title>Lontong Daun - FoodRd.</title>
+
+        <!-- Link JavaScript External Font Awesome -->
+        <script src="https://kit.fontawesome.com/74548f8aa8.js" crossorigin="anonymous"></script>
+
+        <!-- File Eksternal CSS Utama -->
+        <link rel="stylesheet" href="../styles/style.css">
+
+        <!-- File Eksternal CSS Media Queries -->
+        <link rel="stylesheet" href="../styles/media-queries.css">
+    </head>
+    <body>
+        <!-- Kepala -->
+        <header id="header">
+            <!-- Judul -->
+            <section id="judul">
+                <a href="../"><h1>Food<span id="spanMerah">Rd.</span></h1></a>
+            </section>
+
+            <!-- Navigasi Utama -->
+            <nav id="navigasi-atas">
+                <a href="../"><i class="iconNavAtas fa-solid fa-house"></i>Beranda</a>
+                <a href="#menu"><i class="iconNavAtas fa-sharp fa-solid fa-bowl-food"></i>Menu</a>
+                <a href="../#tentang"><i class="iconNavAtas fa-solid fa-circle-info"></i>Tentang</a>
+                <a href="../#kontak"><i class="iconNavAtas fa-solid fa-phone-volume"></i>Kontak</a>
+                <a href="../#dukung"><i class="iconNavAtas fa-solid fa-share-from-square"></i>Dukung</a>
+            </nav>
+
+            <!-- Bungkus Terang/Gelap & Nav Mobile -->
+            <section id="terangGelap-NavMob">
+                <!-- Mode Terang/Gelap -->
+                <section id="terang-gelap">
+                    <i id="terang" class="fa-solid fa-sun" onclick="terang('gelap', 'block')" title="Mode terang"></i>
+                    <i id="gelap" class="fa-solid fa-moon" onclick="gelap('terang', 'block')" title="Mode gelap"></i>
+                </section>
+
+                <!-- Navigasi Mobile -->
+                <section id="navigasi-mobile">
+                    <i id="bar" class="fa-solid fa-bars" onclick="silang('silang', 'block')"></i>
+                    <i id="silang" class="fa-solid fa-circle-xmark" onclick="bar('bar', 'block')"></i>
+                </section>
+            </section>
+        </header>
+        <!-- =============================================== -->
+
+
+        <!-- Bungkus menu navigasi mobile -->
+        <section id="bungkus-menuNM">
+            <a href="/" class="aktif"><i class="aktif iconNavAtas fa-solid fa-house"></i>Beranda</a> <hr>
+            <a href="../#menu"><i class="iconNavAtas fa-sharp fa-solid fa-bowl-food"></i>Menu</a>
+            <a href="../#tentang"><i class="iconNavAtas fa-solid fa-circle-info"></i>Tentang</a>
+            <a href="../#kontak"><i class="iconNavAtas fa-solid fa-phone-volume"></i>Kontak</a>
+            <a href="../#dukung"><i class="iconNavAtas fa-solid fa-share-from-square"></i>Dukung</a>
+        </section>
+        <!-- =============================================== -->
+
+
+        <!-- Badan -->
+        <main id="mainArtikel">
+
+            <!-- Article -->
+            <article id="artikelUtama">
+                <section id="bungkusArtikel">
+
+                    <section id="judulArtikel">
+                        <h2>Lontong Daun</h2>
+                    </section>
+
+                    <section id="gambarArtikel">
+                        <figure>
+                            <img src="../images/lontong-daun.jpg" width="80%" alt="Lontong Daun">
+                            <figcaption style="font-size: small;">Lontong Daun</figcaption>
+                        </figure>
+                    </section>
+
+                    <section id="deskripsiArtikel">
+                        <section id="resep">
+                            <h3>Resep:</h3>
+                        </section>
+
+                        <section id="bahan">
+                            <h4>Bahan - bahan:</h4>
+                            <ul>
+                                <li>300 gram beras pulen</li>
+                                <li>250 ml air</li>
+                                <li>250 santan cair</li>
+                                <li>6 buah daun jeruk</li>
+                                <li>10 buah daun pisang batu</li> 
+                                <li>lidi untuk menyemat</li>
+                            </ul>
+                        </section>
+
+                        <section id="caraMembuat">
+                            <h4>Cara membuat:</h4>
+                            <ol>
+                                <li>Cuci beras seperti biasa, kemudian tiriskan airnya.</li>
+                                <li>Taruh beras dalam panci, tuangkan air, santan, dan daun jeruk. Jangan lupa sedikit garam agar rasa lontong lebih gurih.</li>
+                                <li>Masak beras tersebut dengan api sedang sampai air terserap ke beras. Aduk sesekali. Jika air sudah terserap ke beras, dinginkan dengan cara angin-anginkan</li>
+                                <li>Ambil helai daun pisang, kemudian taruh beras yang sudah dimasak tersebut ke daun sekitar tiga sendok makan.</li>
+                                <li>Gulung daun pisang dengan rapi dan sematkan kedua sisi dengan lidi.</li>
+                                <li>Siapkan kukusan dan masukkan air yang cukup banyak. Kukus lontong lebih kurang 1 jam. Bisa juga direbus di air mendidih selama lebih kurang 2 jam.</li>
+                                <li>Jika lontong sudah matang, angin-anginkan dengan cara digantung.</li>
+                            </ol>
+
+                        </section>
+
+                    </section>
+                </section>
+            </article>
+
+            <!-- Aside -->
+            <aside id="aside">
+                <section class="kontenAside">
+                    <h3>Menu</h3>
+
+                    <a href=""><img src="../images/nasi-goreng.png" alt="Nasi Goreng">Nasi Goreng</a>
+
+                    <a href=""><img src="../images/pisang-kukus.png" alt="Pisang Kukus">Pisang Kukus</a>
+
+                    <a href=""><img src="../images/tahu-pedas-manis.png" alt="Tahu Pedas Manis">Tahu Pedas Manis</a>
+
+                    <a href=""><img src="../images/tumis-kangkung.png" alt="Tumis Kangkung">Tumis Kangkung</a>
+
+                    <a href=""><img src="../images/ayam-geprek.jpg" alt="Ayam Geprek">Ayam Geprek</a>
+
+                    <a href=""><img src="../images/lawar-bali.jpg" alt="Lawar Bali">Lawar Bali</a>
+
+                    <a href=""><img src="../images/lontong-daun.jpg" alt="Lontong Daun">Lontong Daun</a>
+
+                    <a href=""><img src="../images/cenil-kenyal.jpg" alt="Cenil Kenyal">Cenil Kenyal</a>
+                </section>
+            </aside>
+        </main>
+
+        <!-- Kaki -->
+        <footer id="footer">
+            
+            <section id="bungkus-footer">
+                <!-- Navigasi bawah -->
+                <nav id="navigasi-bawah">
+                    <i class="fX fa-solid fa-compass"></i><h3 id="h3Footer">Menu Navigasi</h3>
+                    <section id="bungkus-navBawah">
+                        <a href="/">Beranda</a>
+                        <a href="../#menu">Menu</a>
+                        <a href="../#tentang">Tentang</a>
+                        <a href="../#kontak">Kontak</a>
+                        <a href="../#dukung">Dukung</a>
+                    </section>
+                </nav>
+
+                <!-- Media Sosial -->
+                <section id="media-sosial">
+                    <i class="fY fa-solid fa-thumbs-up"></i><h3 id="h3Footer">Media Sosial</h3>
+                    <section id="bungkus-medSos">
+                        <a href="https://www.facebook.com/putu03/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/putusujane/" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/putusujane" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto: blogibagi@gmail.com"  title="E-Mail"><i class="fa-solid fa-envelope"></i></a>
+                    </section>
+                </section>
+
+                <!-- Bahasa Pemrograman -->
+                <section id="bahasa-pemrograman">
+                    <i class="fZ fa-solid fa-file-code"></i><h3 id="h3Footer">Dibuat Dengan:</h3>
+                    <section id="bungkus-bhsPmrgm">
+                        <i class="fa-solid fa-heart" title="Heart"></i>
+                        <i class="fa-brands fa-html5" title="HTML"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Copyright -->
+            <section id="copyright">
+                <p>Putu Sujane | &copy; 2023</p>
+            </section>
+
+        </footer>
+
+        <!-- File Eksternal JavaScript -->
+        <script src="../scripts/script.js"></script>
+    </body>
+</html>
