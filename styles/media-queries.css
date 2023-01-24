@@ -19,7 +19,11 @@
     }
 
     #ucapan-deskripsi h3 {
-        font-size: larger;
+        font-size: large;
+    }
+
+    #ucapan-deskripsi h2 {
+        font-size: 4.5em;
     }
 
     #bungkus-footer {
@@ -61,11 +65,11 @@
         display: block;
         position: absolute;
         overflow-x: hidden;
-        background: url("../Images/lawar-bali.jpg");
+        background: url("../images/lawar-bali.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        filter: blur(10px);
+        filter: blur(6px);
         width: 92vw;
         height: 100vh;
         z-index: -999;
@@ -92,6 +96,10 @@
     #tentang p, #kontak p, #dukung p {
         font-size: 1.2em;
     }
+
+    .menu {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 370px) {
@@ -115,6 +123,7 @@
 
     .menu:hover {
         scale: unset !important;
+        transform: scale(unset) !important;
         filter: blur(0) !important;
     }
 
