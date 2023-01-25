@@ -24,12 +24,20 @@ class FoodRd {
         } else {
           this.id[i].setAttribute("href", nilai = this.id[i].innerText.replace(/\s+/g, '-').toLowerCase() + ".html");
         }
+
+      } else if (atribut === "titleImgArtikel") {
+        this.id[i].setAttribute("title", nilai = this.id[i].alt);
       }
 
     }
   };
 
 };
+
+const setImgArtikel = new FoodRd("#gambarArtikel img");
+setImgArtikel.setAtribut("style", "width: 100%");
+
+setImgArtikel.setAtribut("titleImgArtikel");
 
 const setTitle = new FoodRd("header a, main a, #bungkus-navBawah a");
 setTitle.setAtribut("title");
@@ -68,7 +76,7 @@ const gelap = (id, nilai) => {
     document.body.style.backgroundColor = "unset";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, main i, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#212121";
     }
@@ -90,7 +98,7 @@ const terang = (id, nilai) => {
     document.body.style.backgroundColor = "#1e1e1e";
     document.getElementById("header").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, main i, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#f5f5f5";
     }

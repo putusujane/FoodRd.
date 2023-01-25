@@ -123,7 +123,7 @@
 
     .menu:hover {
         scale: unset !important;
-        transform: scale(unset) !important;
+        transform: scale(0) !important;
         filter: blur(0) !important;
     }
 
