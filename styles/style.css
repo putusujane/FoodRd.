@@ -157,6 +157,17 @@ main, footer {
 /* Icon terang */
 .fa-sun {
     color: #F28C38;
+    animation: putarSun 10s infinite linear;
+}
+
+@keyframes putarSun {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 /* Icon gelap */
@@ -179,7 +190,7 @@ main, footer {
 }
 
 /* Rotasi icon terang, gelap, dan silang saat hover */
-#terang-gelap i:hover, #silang:hover {
+#silang:hover {
     transform: rotate(360deg);
 }
 
@@ -241,22 +252,22 @@ a:hover, i:hover {
 
 #figureImgUtama img {
     max-width: 100%;
-    animation: putarGeprek 60s infinite;
+    animation: putarGeprek 70s infinite linear;
 }
 
-/* @keyframes putarGeprek {
+@keyframes putarGeprek {
     from {
         transform: rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(359deg);
     }
-} */
+}
 
 #utama img {
     max-width: 100%;
-    filter: brightness(90%);
+    filter: brightness(95%);
 }
 
 /* Cursor pointer semua tombol */
