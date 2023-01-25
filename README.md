@@ -18,5 +18,5 @@ Bahasa yang digunakan **HTML**, **CSS**, dan **JavaScript**.
 
 ## Identitas Pembuat
 
-**Nama**    : Putu Sujane
-**Alamat**  : Tulang Bawang Barat, Lampung
+1. **Nama**    : Putu Sujane
+2. **Alamat**  : Tulang Bawang Barat, Lampung

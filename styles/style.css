@@ -494,9 +494,9 @@ footer {
     margin: 10px 20px;
 }
 
-#judulArtikel h2 {
+/* #judulArtikel h2 {
     margin-bottom: 1em;
-}
+} */
 
 #gambarArtikel {
     text-align: center;
@@ -504,6 +504,7 @@ footer {
 
 #gambarArtikel img {
     border-radius: 10px;
+    margin-top: 1em;
 }
 
 #resep h3 {

@@ -53,7 +53,37 @@ setLink.setAtribut("link");
 
 const lazyLoad = new FoodRd("main img");
 lazyLoad.setAtribut("lazyImg");
+// =========================================================
 
+// Membuat navigasi breadcrumb diatas judul artikel.
+const breadcrumb = () => {
+  if (document.body.contains(document.querySelector("#bungkusArtikel"))) {
+    let aBaru = document.createElement("p");
+    aBaru.setAttribute("id", "breadcrumb");
+    aBaru.innerHTML = "Anda berada di: <a href='../' title='Beranda'>Beranda</a> &rarr; " + document.querySelector("#gambarArtikel img").alt;
+    aBaru.style.marginBottom = "1em";
+
+    document.querySelector("#bungkusArtikel").before(aBaru);
+  }
+}
+breadcrumb();
+// ===========================================================
+
+const tanggal = (isKueri, namaEBaru, eParent) => {
+  if (document.body.contains(document.querySelector(isKueri))) {
+    let eBaru = document.createElement(namaEBaru);
+    document.querySelector(eParent).after(eBaru);
+
+    if (namaEBaru === "time") {
+      let lM = document.lastModified;
+      eBaru.setAttribute("datetime", lM);
+      eBaru.innerText = lM;
+    }
+
+  }
+}
+
+tanggal("#judulArtikel", "time", "#judulArtikel h2");
 
 // Menu navigasi mobile
 const bar = (id, nilai) => {
@@ -122,124 +152,125 @@ const terang = (id, nilai) => {
 
 
 let otherElement = document.querySelector('#menu1');
-let allElements = document.querySelectorAll('.menu');
-
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+let allElements = document.querySelector('.menu');
+if (document.body.contains(allElements)) {
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu2');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu2');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu3');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu3');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu4');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu4');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu5');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu5');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu6');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu6');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu7');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu7');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
 
-otherElement = document.querySelector('#menu8');
-allElements = document.querySelectorAll('.menu');
+  otherElement = document.querySelector('#menu8');
+  allElements = document.querySelectorAll('.menu');
 
-otherElement.addEventListener('mouseover', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(2px)';
+  otherElement.addEventListener('mouseover', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(2px)';
+    });
   });
-});
 
-otherElement.addEventListener('mouseleave', () => {
-  allElements.forEach(element => {
-    element.style.filter = 'blur(0)';
+  otherElement.addEventListener('mouseleave', () => {
+    allElements.forEach(element => {
+      element.style.filter = 'blur(0)';
+    });
   });
-});
+}
 
 // =================================================
 // Fitur Mode terang atau gelap sesuai tema/pengaturan browser atau Sistem Operasi.
