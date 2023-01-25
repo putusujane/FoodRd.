@@ -150,13 +150,11 @@ main, footer {
     font-weight: bold;
 }
 
-#bungkus-menuNM i:hover {
-    /* transform: scale(0); */
-}
-
 /* Icon terang */
 .fa-sun {
-    color: #F28C38;
+    background: -webkit-linear-gradient(#bd5500, #FDB813);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: putarSun 10s infinite linear;
 }
 
@@ -174,7 +172,8 @@ main, footer {
 .fa-moon {
     width: 40.4px;
     height: 40.4px;
-    color: #F5F3CE;
+    color: #FEFCD7;
+    animation: putarSun 10s infinite linear;
 }
 
 #terangGelap-NavMob {
@@ -376,7 +375,7 @@ article {
 }
 
 #tentang i, #kontak i, #dukung i {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 
@@ -487,6 +486,10 @@ footer {
     width: 70%;
 }
 
+#bungkusArtikel {
+    width: 95%;
+}
+
 #bungkusArtikel, .kontenAside {
     margin: 10px 20px;
 }
@@ -560,7 +563,8 @@ aside {
 }
 
 .kontenAside a {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     overflow: hidden;
 
@@ -572,6 +576,7 @@ aside {
 
 .kontenAside img {
     width: 100%;
+    text-align: center;
     max-height: 240px;
     border-radius: 15px;
     background-position: center;

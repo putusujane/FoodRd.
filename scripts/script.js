@@ -27,6 +27,9 @@ class FoodRd {
 
       } else if (atribut === "titleImgArtikel") {
         this.id[i].setAttribute("title", nilai = this.id[i].alt);
+
+      } else if (atribut === "lazyImg") {
+        this.id[i].setAttribute("loading", "lazy");
       }
 
     }
@@ -48,6 +51,8 @@ setTarget.setAtribut("target");
 const setLink = new FoodRd("article a, aside a");
 setLink.setAtribut("link");
 
+const lazyLoad = new FoodRd("main img");
+lazyLoad.setAtribut("lazyImg");
 
 
 // Menu navigasi mobile
@@ -89,6 +94,7 @@ const gelap = (id, nilai) => {
 
     document.getElementById("aside").style.background = "rgba(245, 245, 245, 0.6)";
 }
+
 // ============================================================================
 const terang = (id, nilai) => {
     document.getElementById("terang").style.display = "none";
