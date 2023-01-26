@@ -30,6 +30,10 @@ class FoodRd {
 
       } else if (atribut === "lazyImg") {
         this.id[i].setAttribute("loading", "lazy");
+
+      } else if (atribut === "role") {
+        const role = ["navigation", "button", "figure", "img", "main", "article"];
+        this.id[i].setAttribute(atribut, role[nilai]);
       }
 
     }
@@ -53,6 +57,19 @@ setLink.setAtribut("link");
 
 const lazyLoad = new FoodRd("main img");
 lazyLoad.setAtribut("lazyImg");
+
+let semantik = new FoodRd("nav, #bungkus-menuNM");
+semantik.setAtribut("role", 0)
+semantik = new FoodRd("button, #terangGelap-NavMob");
+semantik.setAtribut("role", 1);
+semantik = new FoodRd("figure");
+semantik.setAtribut("role", 2);
+semantik = new FoodRd("img");
+semantik.setAtribut("role", 3);
+semantik = new FoodRd("main");
+semantik.setAtribut("role", 4)
+semantik = new FoodRd("article");
+semantik.setAtribut("role", 5)
 // =========================================================
 
 // Membuat navigasi breadcrumb diatas judul artikel.
@@ -60,7 +77,7 @@ const breadcrumb = () => {
   if (document.body.contains(document.querySelector("#bungkusArtikel"))) {
     let aBaru = document.createElement("p");
     aBaru.setAttribute("id", "breadcrumb");
-    aBaru.innerHTML = "Anda berada di: <a href='../' title='Beranda'>Beranda</a> &rarr; " + document.querySelector("#gambarArtikel img").alt;
+    aBaru.innerHTML = "<a href='../' title='Beranda'>Beranda</a> &rarr; " + document.querySelector("#gambarArtikel img").alt;
     aBaru.style.marginBottom = "1em";
 
     document.querySelector("#bungkusArtikel").before(aBaru);
@@ -69,6 +86,7 @@ const breadcrumb = () => {
 breadcrumb();
 // ===========================================================
 
+// Tanggal dipublikasi pada halaman artikel dibawah judul
 const tanggal = (isKueri, namaEBaru, eParent) => {
   if (document.body.contains(document.querySelector(isKueri))) {
     let eBaru = document.createElement(namaEBaru);
@@ -77,13 +95,13 @@ const tanggal = (isKueri, namaEBaru, eParent) => {
     if (namaEBaru === "time") {
       let lM = document.lastModified;
       eBaru.setAttribute("datetime", lM);
-      eBaru.innerText = lM;
+      eBaru.innerText = `Tanggal publikasi: ${lM}`;
     }
 
   }
 }
-
 tanggal("#judulArtikel", "time", "#judulArtikel h2");
+// ===========================================================
 
 // Menu navigasi mobile
 const bar = (id, nilai) => {
@@ -111,7 +129,7 @@ const gelap = (id, nilai) => {
     document.body.style.backgroundColor = "unset";
     document.getElementById("header").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, main i, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, time, main i, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#212121";
     }
@@ -134,7 +152,7 @@ const terang = (id, nilai) => {
     document.body.style.backgroundColor = "#1e1e1e";
     document.getElementById("header").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
     
-    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, main i, figcaption, #foodTntng, footer i");
+    const nodeList = document.querySelectorAll("#navigasi-atas a, #navigasi-atas i, #navigasi-mobile i, #spanH2, #bungkus-menuNM i, a, h1, h2, h3, h4, p, ul, li, ol, time, main i, figcaption, #foodTntng, footer i");
     for (let i = 0; i < nodeList.length; i++) {
         nodeList[i].style.color = "#f5f5f5";
     }
@@ -274,11 +292,11 @@ if (document.body.contains(allElements)) {
 
 // =================================================
 // Fitur Mode terang atau gelap sesuai tema/pengaturan browser atau Sistem Operasi.
-const isDark = window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+window.onload = window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   if (event.matches) {
     terang('gelap', 'block');
 
   } else {
     gelap('terang', 'block');
   }
-});
+})

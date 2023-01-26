@@ -404,6 +404,7 @@ footer {
 }
 
 #copyright {
+    font-size: small;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -504,7 +505,12 @@ footer {
 
 #gambarArtikel img {
     border-radius: 10px;
-    margin-top: 1em;
+    margin-top: 2em;
+}
+
+#caraMembuat {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #resep h3 {
@@ -512,15 +518,19 @@ footer {
 }
 
 h4 {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
+}
+
+#caraMembuat {
+    margin-top: 50px;
 }
 
 ul, ol {
-    margin: 1.2em 0 1.2em 50px;
+    margin: .9em 0 1.2em 40px;
 }
 
 li {
-    line-height: 1.8em;
+    line-height: 1.6em;
     padding-inline-start: 10px;
     vertical-align: middle;
 }
@@ -528,9 +538,9 @@ li {
 li::after {
     content: "";
     display: block;
-    width: 90%;
-    margin-bottom: 4px;
-    border: 1px solid rgb(128, 128, 128, 0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid rgb(128, 128, 128, 0.4);
 }
 
 aside {
