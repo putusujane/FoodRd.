@@ -95,7 +95,7 @@ const tanggal = (isKueri, namaEBaru, eParent) => {
     if (namaEBaru === "time") {
       let lM = document.lastModified;
       eBaru.setAttribute("datetime", lM);
-      eBaru.innerText = `Tanggal publikasi: ${lM}`;
+      eBaru.innerText = `Dipublikasi: ${lM}`;
     }
 
   }
@@ -120,6 +120,13 @@ const silang = (id, nilai) => {
 
 document.getElementById("gelap").style.display = "none";
 
+// Kondisi ubah bakcground jika ada elemen id "artikelUtama"
+let bgAS = (id, warnaBg) => {
+  if (document.body.contains(document.querySelector("#mainArtikel"))) {
+    document.querySelector(id).style.background = warnaBg;
+  }
+}
+
 // Mode Dark
 const gelap = (id, nilai) => {
     document.getElementById("gelap").style.display = "none";
@@ -137,10 +144,8 @@ const gelap = (id, nilai) => {
     document.getElementById("footer").style.background = "#f5f5f5";
     document.getElementById("bungkus-menuNM").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
 
-
-    document.getElementById("artikelUtama").style.background = "rgba(245, 245, 245, 0.6)";
-
-    document.getElementById("aside").style.background = "rgba(245, 245, 245, 0.6)";
+    bgAS("#artikelUtama", "rgba(245, 245, 245, 0.6)");
+    bgAS("#aside", "rgba(245, 245, 245, 0.6)");
 }
 
 // ============================================================================
@@ -162,10 +167,8 @@ const terang = (id, nilai) => {
     // warna background menu mobile
     document.getElementById("bungkus-menuNM").style.backgroundColor = "rgba(30, 30, 30, 0.9)";
 
-
-    document.getElementById("artikelUtama").style.background = "rgba(48, 48, 48, 0.7)";
-
-    document.getElementById("aside").style.background = "rgba(48, 48, 48, 0.7)";
+    bgAS("#artikelUtama", "rgba(48, 48, 48, 0.7)");
+    bgAS("#aside", "rgba(48, 48, 48, 0.7)");
 }
 
 

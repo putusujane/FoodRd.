@@ -4,6 +4,10 @@
 
 **FoodRd.** Merupakan website latihan yang menyediakan kumpulan menu makanan atau masakan beserta resep dari Indonesia.
 
+## GitHub Page
+
+- Link : https://putusujane.github.io/FoodRd./
+
 ## Fitur
 
 - Tombol mode gelap atau terang pada pojok kanan atas website.
